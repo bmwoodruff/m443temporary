@@ -1,0 +1,80 @@
+---
+title: "Math 443: Linear Algebra II"
+---
+
+## Welcome
+
+Welcome to Math 443, a second course in linear algebra.  We'll be studying *Matrix Mathematics: A Second Course in Linear Algebra* by Garcia and Horn. (Here's a [Google Books preview](https://www.google.com/books/edition/Matrix_Mathematics/gv9xzwEACAAJ?hl=en).)
+
+Through the semester, we'll be working together to create a collection of high quality solutions for many of the problems in this text. We'll be using `quarto` files with `R` and `RStudio` to create high quality solutions. We'll use `git` to share our work on `GitHub`. We'll utilize `python` for computations. 
+
+
+### Table of Submissions
+
+```{r include=FALSE}
+library(tidyverse)
+library(DT)
+
+# Code copied from ChatGPT
+# List of URLs for your CSV files
+url_list <- c(
+  "https://byuim443.github.io/Kip-Smith/file_list.csv",
+  "https://byuim443.github.io/DayP/file_list.csv",
+  "https://byuim443.github.io/PlanetDragons/file_list.csv",
+  "https://byuim443.github.io/G/file_list.csv",
+  "https://byuim443.github.io/Ajax/file_list.csv",
+  "https://byuim443.github.io/Ewing/file_list.csv",
+  "https://byuim443.github.io/Cub3rkid/file_list.csv",
+  "https://byuim443.github.io/mathmanican/file_list.csv"
+)
+
+# Function to read CSV with error handling
+#read_csv_safe <- possibly(read_csv, otherwise = NULL)
+
+# Function to read CSV with error handling and check for zero rows
+read_csv_safe <- function(url) {
+  data <- tryCatch(
+    read_csv(url),
+    error = function(e) NULL
+  )
+  
+  if (!is.null(data) && nrow(data) > 0) {
+    return(data)
+  } else {
+    return(NULL)
+  }
+}
+
+# Map the URLs to read_csv_safe
+data_list <- map(url_list, read_csv_safe)
+
+# Filter out NULL elements (occurred when 404 error)
+data_list <- compact(data_list)
+
+# Combine the data frames if needed
+combined_data <- 
+  bind_rows(data_list) %>% 
+  arrange(-Chapter,-Problem)
+
+```
+
+Here's all the contributed submissions in a searchable table.
+
+```{r echo=FALSE}
+DT::datatable(combined_data, 
+              escape = FALSE, 
+              rownames=FALSE,
+              options = list(pageLength = 10))
+```
+
+### [Setup](setup.qmd)
+
+We'll be using multiple software packages this semester.  The setup section will help you get things started. 
+
+### Syllabus
+
+The syllabus is located in [Canvas](https://byui.instructure.com/courses/271212), along with discussion boards for uploading your prep work. 
+
+### [FAQ](faq.qmd)
+
+Look here for common questions on the course.

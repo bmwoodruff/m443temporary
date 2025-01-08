@@ -1,0 +1,15 @@
+---
+title: "Frequently Asked Questions"
+date: now
+draft: false
+---
+
+This is the first time teaching this course using GitHub.  I'll add common questions to this page.
+
+### "What questions are there?"
+
+I'll add stuff here when I get this going. 
+
+
+
+

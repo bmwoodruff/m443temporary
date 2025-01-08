@@ -1,0 +1,94 @@
+---
+title: "Course Setup"
+---
+
+## How to get your computer setup?
+
+### R and R-Studio
+
+Get the latest versions of R and R-Studio running on your computer.
+
+-   First install R at <https://mirror.las.iastate.edu/CRAN/>. Pick your platform and follow the instructions.
+-   If you already have R installed, verify that you have the most recent version. Make sure you have the most recent version.
+-   After R is installed, install RStudio at <https://posit.co/download/rstudio-desktop/#download>.
+
+Note that RStudio runs R inside of it and provides you with many other tools that go beyond what R can do. This is why R must be installed first, so that RStudio can use it.
+
+### R Packages
+
+We'll need a few R packages installed.
+
+-   The simplest option is to download the file [simple-install.zip](https://byuim443.github.io/files/simple-install.zip), extract the simple-install.qmd file, open it in RStudio, and then follow the messages that will appear which prompt you to install some missing packages.
+-   Another option is to just install them yourself, copy/pasting the lines below into your R command line.
+    ```{r, eval=FALSE}
+    install.packages("tidyverse")
+    install.packages("knitr")
+    install.packages("DT")
+    install.packages("quarto")
+    install.packages("usethis")
+    install.packages("gitcreds")
+    ```
+
+### Git
+
+Download and install Git from the [official website](https://git-scm.com/downloads).
+
+### GitHub
+
+Go to [GitHub](https://github.com/) and create an account.
+
+-   Use a professional username that you would be comfortable sharing with an employer.
+-   In the first discussion board in Canvas, share your username with the class.
+-   You'll get an invite to join the BYUIm443 organization in your email that you used to set up your GitHub account. 
+
+### Connect RStudio with Git and GitHub.
+
+The last step is to configure RStudio so that it works with Git and GitHub. We'll walk through this in class together once.
+
+-   We already installed the `usethis` and `gitcreds` libraries. Load them in R. 
+    ```{r, eval=FALSE}
+    library(usethis)
+    library(gitcreds)
+    ```
+
+-   Modify your git.config page so that it contains your username and email associated with GitHub. The following command will open your git.config file.
+
+    ```{r, eval=FALSE}
+    edit_git_config()
+    ```
+    Then edit the file that opens so that it contains your username and email.
+    ```{}
+    [user]
+     name = yourusername
+     email = youremail@something.abc
+    ```
+
+-   Create a GitHub token, and set an expiration date (at least 90 days for the entire semester). You can leave the other default options.
+    ```{r, eval=FALSE}
+    create_github_token()
+    ```
+
+-   You’ll get a token in the previous step. Paste that token in after running the next line.
+    ```{r, eval=FALSE}
+    gitcreds_set()        #Paste token in when prompted.   
+    ```
+    
+At this point, your system should be configured to allow you to synchronize your work with GitHub. Here's a video walk through of the steps above. 
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe src="https://www.loom.com/embed/c9770e42f8bb4813af94c4a512f14c71?sid=467dcece-f945-47b2-acae-dde0267a488b" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+
+### Clone your repository from Github
+
+Now that you've got Git on your computer and working with RSTudio, we need to make sure you can clone your repository to your computer, and then push changes you've made back up to github.  The following video walks you through these steps. 
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe src="https://www.loom.com/embed/5cd93189f11f4bfc90d9635ff3dda7ce?sid=366a918a-239f-4513-878c-676274714f09" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+
+I recommend spending a few minutes watching the Git intro videos at [https://git-scm.com/videos](https://git-scm.com/videos). They're worth watching to understand a bit more about how Git works.  
+
+### Creating a solution and pushing your work to GitHub
+
+To create a solution, make a copy of the template.qmd file in your repo and save it using the naming convention P.x.x.qmd (so use P.1.35.qmd for problem 1.35).  Then type up your solution using LaTeX conventions for the mathematics.  Once your done, remember to commit your changes and then push them to GitHub. 
+
+This video walks you through the process above. 
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe src="https://www.loom.com/embed/011626b2ac8545a5900f356301a894fc?sid=1707c5b8-48c4-4162-886a-6b8b8cbc323e" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>

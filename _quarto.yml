@@ -1,0 +1,37 @@
+project:
+  type: website
+
+website:
+  title: "Math 443 - Linear Algebra II"
+  back-to-top-navigation: true
+  repo-url: https://github.com/BYUIm443/web
+  repo-actions: [issue]
+  # [layout](https://quarto.org/docs/output-formats/page-layout.html)
+
+  page-footer: 
+    border: true
+    left: "Ben Woodruff BYU-I 2024©"
+
+  navbar:
+    background: primary
+    search: true   
+    right:
+      - text: "Home"
+        file: index.qmd
+      - text: "Setup"
+        file: setup.qmd
+      - text: "FAQ"
+        file: faq.qmd
+
+format:  
+  html:
+    theme:
+      light: flatly
+      dark: darkly
+      #light: cosmo
+      #dark: [cosmo, theme-dark.scss]
+    css: styles.css
+    toc: true
+
+
+

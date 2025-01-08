@@ -1,0 +1,58 @@
+[
+  {
+    "objectID": "syllabus.html",
+    "href": "syllabus.html",
+    "title": "DS 250 Syllabus",
+    "section": "",
+    "text": "Gotta add\n\nOverview\nstuff here\nor just send them to Canvas, providing a link.\ninclude competencies here.\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Math 443: Linear Algebra II",
+    "section": "",
+    "text": "Welcome to Math 443, a second course in linear algebra. We’ll be studying Matrix Mathematics: A Second Course in Linear Algebra by Garcia and Horn. (Here’s a Google Books preview.)\nThrough the semester, we’ll be working together to create a collection of high quality solutions for many of the problems in this text. We’ll be using quarto files with R and RStudio to create high quality solutions. We’ll use git to share our work on GitHub. We’ll utilize python for computations.\n\n\nHere’s all the contributed submissions in a searchable table.\n\n\n\n\n\n\n\n\n\n\nWe’ll be using multiple software packages this semester. The setup section will help you get things started.\n\n\n\nThe syllabus is located in Canvas, along with discussion boards for uploading your prep work.\n\n\n\nLook here for common questions on the course."
+  },
+  {
+    "objectID": "index.html#how-to-navigate-this-course",
+    "href": "index.html#how-to-navigate-this-course",
+    "title": "Math 443: Linear Algebra II",
+    "section": "",
+    "text": "I’ll add more here soon. And let’s check that gh-pages is working correctly, after running the quarto command from the terminal. 1. I added myself as a member to this repo. We’ll see what I can do now. 1. I had to change the default setting for the entire organization to allow write permission. Time to try this again.\n\n\nHere’s all submissions in a table.\n\n\n\n\n\n\n\n\n\n\nThis section contains all the needed info to get your computer setup for the course.\n\n\n\nThe syllabus and course competencies are located here. Take time to review them as they contain all the info to help you get the grade you want out of the course.\n\n\n\nLook here for common questions on the course."
+  },
+  {
+    "objectID": "faq.html",
+    "href": "faq.html",
+    "title": "Frequently Asked Questions",
+    "section": "",
+    "text": "This is the first time teaching this course using GitHub. I’ll add common questions to this page.\n\n“What questions are there?”\nI’ll add stuff here when I get this going.\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "setup.html",
+    "href": "setup.html",
+    "title": "Course Setup",
+    "section": "",
+    "text": "Get the latest versions of R and R-Studio running on your computer.\n\nFirst install R at https://mirror.las.iastate.edu/CRAN/. Pick your platform and follow the instructions.\nIf you already have R installed, verify that you have the most recent version. Make sure you have the most recent version.\nAfter R is installed, install RStudio at https://posit.co/download/rstudio-desktop/#download.\n\nNote that RStudio runs R inside of it and provides you with many other tools that go beyond what R can do. This is why R must be installed first, so that RStudio can use it.\n\n\n\nWe’ll need a few R packages installed.\n\nThe simplest option is to download the file simple-install.zip, extract the simple-install.qmd file, open it in RStudio, and then follow the messages that will appear which prompt you to install some missing packages.\nAnother option is to just install them yourself, copy/pasting the lines below into your R command line.\n\ninstall.packages(\"tidyverse\")\ninstall.packages(\"knitr\")\ninstall.packages(\"DT\")\ninstall.packages(\"quarto\")\ninstall.packages(\"usethis\")\ninstall.packages(\"gitcreds\")\n\n\n\n\n\nDownload and install Git from the official website.\n\n\n\nGo to GitHub and create an account.\n\nUse a professional username that you would be comfortable sharing with an employer.\nIn the first discussion board in Canvas, share your username with the class.\nYou’ll get an invite to join the BYUIm443 organization in your email that you used to set up your GitHub account.\n\n\n\n\nThe last step is to configure RStudio so that it works with Git and GitHub. We’ll walk through this in class together once.\n\nWe already installed the usethis and gitcreds libraries. Load them in R.\n\nlibrary(usethis)\nlibrary(gitcreds)\n\nModify your git.config page so that it contains your username and email associated with GitHub. The following command will open your git.config file.\n\nedit_git_config()\n\nThen edit the file that opens so that it contains your username and email.\n[user]\n name = yourusername\n email = youremail@something.abc\nCreate a GitHub token, and set an expiration date (at least 90 days for the entire semester). You can leave the other default options.\n\ncreate_github_token()\n\nYou’ll get a token in the previous step. Paste that token in after running the next line.\n\ngitcreds_set()        #Paste token in when prompted.   \n\n\nAt this point, your system should be configured to allow you to synchronize your work with GitHub. Here’s a video walk through of the steps above.\n\n\n\n\n\n\n\nNow that you’ve got Git on your computer and working with RSTudio, we need to make sure you can clone your repository to your computer, and then push changes you’ve made back up to github. The following video walks you through these steps.\n\n\n\n\nI recommend spending a few minutes watching the Git intro videos at https://git-scm.com/videos. They’re worth watching to understand a bit more about how Git works.\n\n\n\nTo create a solution, make a copy of the template.qmd file in your repo and save it using the naming convention P.x.x.qmd (so use P.1.35.qmd for problem 1.35). Then type up your solution using LaTeX conventions for the mathematics. Once your done, remember to commit your changes and then push them to GitHub.\nThis video walks you through the process above."
+  },
+  {
+    "objectID": "index.html#welcome-to-linear-algebra-ii",
+    "href": "index.html#welcome-to-linear-algebra-ii",
+    "title": "Math 443: Linear Algebra II",
+    "section": "",
+    "text": "As the semester goes, we’ll be working to create a collection of high quality solutions for many of the problems in Matrix Mathematics: A Second Course in Linear Algebra. Here’s a Google Books preview\n\nWe’ll be using Quarto\n\n\n\nHere’s all the contributed submissions in a searchable table.\n\n\n\n\n\n\n\n\n\n\nWe’ll be using multiple software packages this semester. The setup section will help you get things started.\n\n\n\nThe syllabus is located in Canvas (see https://byui.instructure.com/courses/271212).\n\n\n\nLook here for common questions on the course."
+  },
+  {
+    "objectID": "setup.html#how-to-get-your-computer-setup",
+    "href": "setup.html#how-to-get-your-computer-setup",
+    "title": "Course Setup",
+    "section": "",
+    "text": "Get the latest versions of R and R-Studio running on your computer.\n\nFirst install R at https://mirror.las.iastate.edu/CRAN/. Pick your platform and follow the instructions.\nIf you already have R installed, verify that you have the most recent version. Make sure you have the most recent version.\nAfter R is installed, install RStudio at https://posit.co/download/rstudio-desktop/#download.\n\nNote that RStudio runs R inside of it and provides you with many other tools that go beyond what R can do. This is why R must be installed first, so that RStudio can use it.\n\n\n\nWe’ll need a few R packages installed.\n\nThe simplest option is to download the file simple-install.zip, extract the simple-install.qmd file, open it in RStudio, and then follow the messages that will appear which prompt you to install some missing packages.\nAnother option is to just install them yourself, copy/pasting the lines below into your R command line.\n\ninstall.packages(\"tidyverse\")\ninstall.packages(\"knitr\")\ninstall.packages(\"DT\")\ninstall.packages(\"quarto\")\ninstall.packages(\"usethis\")\ninstall.packages(\"gitcreds\")\n\n\n\n\n\nDownload and install Git from the official website.\n\n\n\nGo to GitHub and create an account.\n\nUse a professional username that you would be comfortable sharing with an employer.\nIn the first discussion board in Canvas, share your username with the class.\nYou’ll get an invite to join the BYUIm443 organization in your email that you used to set up your GitHub account.\n\n\n\n\nThe last step is to configure RStudio so that it works with Git and GitHub. We’ll walk through this in class together once.\n\nWe already installed the usethis and gitcreds libraries. Load them in R.\n\nlibrary(usethis)\nlibrary(gitcreds)\n\nModify your git.config page so that it contains your username and email associated with GitHub. The following command will open your git.config file.\n\nedit_git_config()\n\nThen edit the file that opens so that it contains your username and email.\n[user]\n name = yourusername\n email = youremail@something.abc\nCreate a GitHub token, and set an expiration date (at least 90 days for the entire semester). You can leave the other default options.\n\ncreate_github_token()\n\nYou’ll get a token in the previous step. Paste that token in after running the next line.\n\ngitcreds_set()        #Paste token in when prompted.   \n\n\nAt this point, your system should be configured to allow you to synchronize your work with GitHub. Here’s a video walk through of the steps above.\n\n\n\n\n\n\n\nNow that you’ve got Git on your computer and working with RSTudio, we need to make sure you can clone your repository to your computer, and then push changes you’ve made back up to github. The following video walks you through these steps.\n\n\n\n\nI recommend spending a few minutes watching the Git intro videos at https://git-scm.com/videos. They’re worth watching to understand a bit more about how Git works.\n\n\n\nTo create a solution, make a copy of the template.qmd file in your repo and save it using the naming convention P.x.x.qmd (so use P.1.35.qmd for problem 1.35). Then type up your solution using LaTeX conventions for the mathematics. Once your done, remember to commit your changes and then push them to GitHub.\nThis video walks you through the process above."
+  },
+  {
+    "objectID": "index.html#welcome",
+    "href": "index.html#welcome",
+    "title": "Math 443: Linear Algebra II",
+    "section": "",
+    "text": "Welcome to Math 443, a second course in linear algebra. We’ll be studying Matrix Mathematics: A Second Course in Linear Algebra by Garcia and Horn. (Here’s a Google Books preview.)\nThrough the semester, we’ll be working together to create a collection of high quality solutions for many of the problems in this text. We’ll be using quarto files with R and RStudio to create high quality solutions. We’ll use git to share our work on GitHub. We’ll utilize python for computations.\n\n\nHere’s all the contributed submissions in a searchable table.\n\n\n\n\n\n\n\n\n\n\nWe’ll be using multiple software packages this semester. The setup section will help you get things started.\n\n\n\nThe syllabus is located in Canvas, along with discussion boards for uploading your prep work.\n\n\n\nLook here for common questions on the course."
+  }
+]
